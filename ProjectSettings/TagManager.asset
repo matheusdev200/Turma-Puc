@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Coletavel
   - Jogador
+  - Health Text
   layers:
   - Default
   - TransparentFX

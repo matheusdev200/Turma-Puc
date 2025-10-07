@@ -1,0 +1,29 @@
+ Persistência de Dados
+ Inventário
+            Pegar um objeto do cenário e adicionar ele no inventário
+            Estrutura de Dados
+            Tipos de Busca em Coleções
+            Salvamento
+
+ Scriptable Object
+
+ Herança e Polimorfismo
+ Eventos e Delegados
+
+ Inimigo
+        Máquina de Estados - OK
+
+        Item Coletável - OK
+            Criação e Remoção de coisas da cena - OK
+            Trigger - OK
+            Interação de Input do Jogador +- OK
+
+        Interface
+            Canvas +-OK
+            Revisão de Canvas
+
+        Git - OK       
+
+//desacoplado
+//reutilizável
+//genérico

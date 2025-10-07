@@ -27,31 +27,3 @@ public class MouseAim : MonoBehaviour
         //caso não -> remove o espelhamento
     }
 }
-
-/*
- Inimigo
-            Máquina de Estados - OK
-
-        Item Coletável - OK
-            Criação e Remoção de coisas da cena - OK
-            Trigger - OK
-            Interação de Input do Jogador +- OK
-
-            Scriptable Object
-
-        Inventário
-            Estrutura de Dados
-
-        Interface
-            Canvas
-
-        Git
-
-        Herança e Polimorfismo
-
-//desacoplado
-//reutilizável
-
-//genérico
-
- */
