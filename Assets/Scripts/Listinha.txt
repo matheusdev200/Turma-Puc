@@ -4,6 +4,7 @@
             Estrutura de Dados
             Tipos de Busca em Coleções
             Salvamento
+            Singletons
 
  Scriptable Object
 

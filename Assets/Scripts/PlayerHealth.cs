@@ -7,24 +7,21 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth;
 
     public TextMeshProUGUI healthText;
-    public GameManager gameManager;
 
     void Awake()
     {
         healthText = GameObject.FindGameObjectWithTag("Health Text")
             .GetComponent<TextMeshProUGUI>();
-
-        gameManager = FindAnyObjectByType<GameManager>();
     }
     void Start()
     {
-        if (gameManager.LoadPlayerHealth() == 0)
+        if (GameManager.instance.LoadPlayerHealth() == 0)
         {
             currentHealth = maxHealth;
         }
         else
         {
-            currentHealth = gameManager.LoadPlayerHealth();
+            currentHealth = GameManager.instance.LoadPlayerHealth();
         }
 
         //atualizando a HUD pela primeira vez
@@ -39,8 +36,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            gameManager.SavePlayerHealth(currentHealth);
-            gameManager.GoToNextLevel();
+            GameManager.instance.SavePlayerHealth(currentHealth);
+            GameManager.instance.GoToNextLevel();
         }
         if (Input.GetKeyDown(KeyCode.F))
         {
