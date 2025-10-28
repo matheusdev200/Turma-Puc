@@ -17,12 +17,9 @@ public class Inventory : MonoBehaviour //C# é fortemente Tipado
             Debug.Log(itens[variavelDeContagem]);//0 //1 //2 // 3 //4! ponto de parada
         }
     }
-
     /*
-     
-    itens {"Mochila", "Picareta", "Pá", "Lanterna"}  (4 elementos, o maior índice é 3)
-    itens[0]
-
+        itens {"Mochila", "Picareta", "Pá", "Lanterna"}  (4 elementos, o maior índice é 3)
+        itens[0]
      */
 }
 //classe de entidade genérica
