@@ -37,7 +37,7 @@ public class PlayerMovement : MonoBehaviour
     }
 
     //Métodos Proprietários
-    public void Move() //Ação que o script vai fazer 
+    void Move() //Ação que o script vai fazer 
     {
         /*
          * Solução: detectar o input(Entrada de ação do usuário [teclado, joystick, 

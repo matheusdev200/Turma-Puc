@@ -1,0 +1,17 @@
+- Thales
+
+- Programação estruturada para Designer
+    - Truques úteis
+    - Eventos, SerializedFields, PlayerPrefs, Arquitetura de Cenas
+    - Prefabs e Prefabs Aninhados
+    - Scriptable Objects com Coroutine
+    Packages * Cinemachine, ProBuilder, InputSystem, 
+
+- Canvas
+    - Interativos
+- Unity em Geral
+    - Pacotes, Menus, etcs
+- GIT -> programa de versionamento
+
+- Extras
+    VisualScripting*

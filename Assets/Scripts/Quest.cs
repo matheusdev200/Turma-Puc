@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using System.Collections.Generic;
 using System.Collections;
+using UnityEditor.UIElements;
 
 [CreateAssetMenu(menuName = "Quests/Quest")]
 public class Quest : ScriptableObject
@@ -13,20 +14,35 @@ public class Quest : ScriptableObject
 
     private void OnValidate()
     {
-        if(string.IsNullOrEmpty(questID))
+        if (string.IsNullOrEmpty(questID))
         {
-            questID = questName+ Guid.NewGuid().ToString();
+            //public string video;
+            //SaveVideo(string video){  "video 3";  }
+            //SaveVideo(int videoID){ todosOsVideos[videoID];}
+
+            questID = questName + Guid.NewGuid().ToString();
         }
     }
 }
 [Serializable]
-public class QuestObjective
+public class QuestObjective //classe c# raiz / tradicional
 {
+    //jeito principal do c# representar um objeto
     public string objectiveID;
     public string description;
     public ObjectiveType type;
     public int requiredAmount;
     public int currentAmount;
+
+    //construtor
+    //""""""método"""""" que constroi um exemplar (instância) dessa classe
+    public QuestObjective(string id, string objectiveDescription, ObjectiveType t, int amount)
+    {
+        objectiveID = id;
+        description = objectiveDescription;
+        type = t;
+        requiredAmount = amount;
+    }
 
     public bool IsCompleted => currentAmount >= requiredAmount;
 }
@@ -46,20 +62,20 @@ public class QuestProgress //classe que acompanha o progresso da quest a qual el
 
         foreach (var obj in quest.objectives)
         {
-            objectives.Add(new QuestObjective
-            {
-                objectiveID = obj.objectiveID,
-                description = obj.description,
-                type = obj.type,
-                requiredAmount = obj.requiredAmount,
-                currentAmount = 0
-            });
+            //método in-line
+            //objectives.Add(new QuestObjective { objectiveID = obj.objectiveID,
+            //description = obj.description, type = obj.type,
+            //requiredAmount = obj.requiredAmount,
+            //currentAmount = 0 });
+            QuestObjective newObjective =
+                new QuestObjective(obj.objectiveID, obj.description, obj.type, obj.requiredAmount);
+            objectives.Add(newObjective);
         }
     }
 
     public bool IsCompleted => objectives.TrueForAll(o => o.IsCompleted);
 
-    public string QuestID => quest.questID;
+    //public string QuestID => quest.questID;
 
     /*
      objectiveID = 0 -> madeira
